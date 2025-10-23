@@ -1,0 +1,66 @@
+<svg width="420" height="120" viewBox="0 0 840 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MarketTray logo</title>
+  <desc id="desc">A gradient monogram icon with stylized tray and the word MarketTray</desc>
+
+  <defs>
+    <!-- Teal → Purple gradient -->
+    <linearGradient id="mtGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00B7A8"/>
+      <stop offset="100%" stop-color="#7A3FF0"/>
+    </linearGradient>
+
+    <!-- Reusable rounded rectangle -->
+    <symbol id="rounded-rect" viewBox="0 0 200 200">
+      <rect x="8" y="8" width="184" height="184" rx="40" ry="40"/>
+    </symbol>
+
+    <!-- Monogram mask to carve “M” and “T” into the icon -->
+    <mask id="mtMask" maskUnits="userSpaceOnUse">
+      <!-- mask background (white shows, black hides) -->
+      <rect x="0" y="0" width="200" height="200" fill="white"/>
+      <!-- “M” shape -->
+      <path d="M42 144 V64 h24 l24 32 24-32 h24 v80 h-24 V102 l-24 32 -24-32 v42 z" fill="black"/>
+      <!-- “T” shape -->
+      <path d="M124 64 h56 v20 h-18 v60 h-20 V84 h-18 z" fill="black"/>
+      <!-- Tray underline -->
+      <path d="M42 160 a16 16 0 0 0 16 16 h104 a16 16 0 0 0 16-16 v0 h-20 a8 8 0 0 1-8 8 H70 a8 8 0 0 1-8-8 z" fill="black"/>
+    </mask>
+
+    <!-- Wordmark as vector paths (so no font dependency) -->
+    <g id="wordmark" fill="url(#mtGradient)">
+      <!-- The following paths draw the text “MarketTray” in a clean geometric style -->
+      <!-- M -->
+      <path d="M0 0 h20 v46 l14-20 h2 l14 20 V0 h20 v80 h-20 L36 44 22 64 20 66 20 80 H0 Z" transform="translate(0,0)"/>
+      <!-- a -->
+      <path d="M90 52 c0-18 12-32 30-32 7 0 13 2 18 6 V20 h20 v60 h-20 v-6 c-5 4-11 6-18 6 -18 0-30-14-30-28zm48 0 c0-8-6-14-14-14s-14 6-14 14 6 14 14 14 14-6 14-14z" />
+      <!-- r -->
+      <path d="M169 20 h20 v32 c3-2 7-4 12-4 14 0 22 10 22 24 v28 h-20 V76 c0-5-3-8-8-8 -4 0-6 1-6 1 v31 h-20z"/>
+      <!-- k -->
+      <path d="M233 20 h20 v24 l20-24 h24 l-26 30 28 30 h-24 l-22-24 v24 h-20z"/>
+      <!-- e -->
+      <path d="M309 52 c0-18 14-32 34-32 20 0 33 14 33 30 0 3 0 6-1 8 h-46 c2 6 7 10 16 10 6 0 12-2 17-6 l9 14 c-8 6-18 10-30 10 -21 0-32-13-32-34zm47-8 c-2-7-8-10-13-10-6 0-12 3-14 10z"/>
+      <!-- t -->
+      <path d="M387 34 h20 v18 h16 v18 h-16 v28 h-20 V70 h-14 V52 h14z"/>
+      <!-- T -->
+      <path d="M428 20 h68 v18 h-24 v42 h-20 V38 h-24z"/>
+      <!-- r -->
+      <path d="M510 20 h20 v32 c3-2 7-4 12-4 14 0 22 10 22 24 v28 h-20 V76 c0-5-3-8-8-8 -4 0-6 1-6 1 v31h-20z"/>
+      <!-- a -->
+      <path d="M575 52 c0-18 12-32 30-32 7 0 13 2 18 6 V20 h20 v60 h-20 v-6 c-5 4-11 6-18 6 -18 0-30-14-30-28zm48 0 c0-8-6-14-14-14s-14 6-14 14 6 14 14 14 14-6 14-14z"/>
+      <!-- y -->
+      <path d="M655 20 h22 l16 40 16-40 h22 l-28 66 c-6 14-16 22-30 22 -4 0-7-1-10-2l5-18 c2 1 4 2 6 2 5 0 9-3 11-8z"/>
+    </g>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(20,20)">
+    <use href="#rounded-rect" fill="url(#mtGradient)"/>
+    <!-- Carve MT + tray out of the gradient square -->
+    <rect x="0" y="0" width="200" height="200" fill="black" mask="url(#mtMask)" fill-opacity="0"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(250,80) scale(1)">
+    <use href="#wordmark"/>
+  </g>
+</svg>

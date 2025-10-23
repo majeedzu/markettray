@@ -1,0 +1,16 @@
+{
+  "name": "markettray",
+  "version": "1.0.0",
+  "description": "A multi-role affiliate marketing platform for Ghana with commission splitting and Paystack integration",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

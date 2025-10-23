@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - MarketTray</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="public/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="public/logo.png" alt="MarketTray Logo">
+                    <span>MarketTray</span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="register-section">
+                <h2>Join MarketTray</h2>
+                <p>Select your role and create an account to get started.</p>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label>Role:</label>
+                        <div class="role-selection">
+                            <input type="radio" id="seller" name="role" value="seller" checked>
+                            <label for="seller">Seller</label>
+                            <input type="radio" id="affiliate" name="role" value="affiliate">
+                            <label for="affiliate">Affiliate</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <div id="password-strength" class="password-strength">
+                            <div class="strength-bar"></div>
+                            <span class="strength-text">Weak</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <div id="password-match" class="validation-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group seller-only">
+                        <label for="businessName">Business Name:</label>
+                        <input type="text" id="businessName" name="businessName">
+                    </div>
+                    <button type="submit" class="btn-primary">Register</button>
+                </form>
+                <p><a href="reset-password.html">Forgot Password?</a></p>
+                <div id="success-message" class="message hidden"></div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 MarketTray. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

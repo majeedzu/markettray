@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MarketTray</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="public/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="public/logo.png" alt="MarketTray Logo">
+                    <span>MarketTray</span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="login-section">
+                <h2>Login to MarketTray</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+                <p><a href="reset-password.html">Forgot Password?</a></p>
+                <p>Don't have an account? <a href="register.html">Register here</a></p>
+                <div id="error-message" class="message error-message"></div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 MarketTray. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

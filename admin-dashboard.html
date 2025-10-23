@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MarketTray</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="public/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="public/logo.png" alt="MarketTray Logo" class="logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#sellers">Sellers</a></li>
+                <li><a href="#affiliates">Affiliates</a></li>
+            </ul>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </nav>
+        <main class="main-content">
+            <section id="overview" class="section active">
+                <h1>Overview</h1>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Total Users</h3>
+                        <p id="total-users">-</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Total Products</h3>
+                        <p id="total-products">-</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Total Transactions</h3>
+                        <p id="total-transactions">-</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Total Revenue</h3>
+                        <p id="total-revenue">-</p>
+                    </div>
+                </div>
+            </section>
+            <section id="analytics" class="section">
+                <h1>Analytics</h1>
+                <div class="charts-container">
+                    <div class="chart-group">
+                        <h2>Page Views</h2>
+                        <canvas id="daily-views-chart"></canvas>
+                        <canvas id="weekly-views-chart"></canvas>
+                        <canvas id="monthly-views-chart"></canvas>
+                        <canvas id="yearly-views-chart"></canvas>
+                    </div>
+                    <div class="chart-group">
+                        <h2>Purchases</h2>
+                        <canvas id="daily-purchases-chart"></canvas>
+                        <canvas id="weekly-purchases-chart"></canvas>
+                        <canvas id="monthly-purchases-chart"></canvas>
+                        <canvas id="yearly-purchases-chart"></canvas>
+                    </div>
+                </div>
+                <div class="top-lists">
+                    <div class="top-list">
+                        <h2>Top 10 Selling Products</h2>
+                        <ul id="top-products-list"></ul>
+                    </div>
+                    <div class="top-list">
+                        <h2>Top 10 Sellers by Revenue</h2>
+                        <ul id="top-sellers-list"></ul>
+                    </div>
+                </div>
+            </section>
+            <section id="products" class="section">
+                <h1>Products</h1>
+                <p>Product management features will be implemented here.</p>
+            </section>
+            <section id="sellers" class="section">
+                <h1>Sellers</h1>
+                <p>Seller management features will be implemented here.</p>
+            </section>
+            <section id="affiliates" class="section">
+                <h1>Affiliates</h1>
+                <p>Affiliate management features will be implemented here.</p>
+            </section>
+        </main>
+    </div>
+    <div id="error-message" class="error-message"></div>
+    <script type="module" src="js/admin-dashboard.js"></script>
+</body>
+</html>

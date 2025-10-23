@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - MarketTray</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="public/logo.png" alt="MarketTray Logo">
+                <span>MarketTray</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="register.html">Become a Seller</a></li>
+                <li><a href="register.html">Become an Affiliate</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        <h1>Checkout</h1>
+        <div id="product-info" class="product-details">
+            <!-- Product details will be loaded here by JS -->
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+            <h2>Customer Information</h2>
+            <div class="form-group">
+                <label for="customer_name">Full Name:</label>
+                <input type="text" id="customer_name" name="customer_name" required>
+            </div>
+            <div class="form-group">
+                <label for="customer_email">Email:</label>
+                <input type="email" id="customer_email" name="customer_email" required>
+            </div>
+            <div class="form-group">
+                <label for="customer_phone">Phone Number:</label>
+                <input type="tel" id="customer_phone" name="customer_phone" placeholder="e.g., 0241234567" required>
+            </div>
+            <div class="form-group">
+                <label for="shipping_address">Shipping Address:</label>
+                <textarea id="shipping_address" name="shipping_address" rows="3" required></textarea>
+            </div>
+
+            <h2>Payment Information</h2>
+            <div class="form-group">
+                <label for="payment_number">Mobile Money Number (MTN MoMo or Telecel Cash):</label>
+                <input type="tel" id="payment_number" name="payment_number" placeholder="e.g., 0241234567" required>
+            </div>
+
+            <button type="submit" id="make-payment-btn" class="btn-primary">Make Payment</button>
+        </form>
+
+        <div id="loading" class="loading" style="display: none;">
+            <p>Processing payment...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MarketTray. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="js/checkout.js"></script>
+</body>
+</html>
